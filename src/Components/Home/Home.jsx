@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div className='w-3/4 mx-auto h-full'>
             <div className='flex flex-col lg:flex-row items-center justify-between'>
-                <div className='text-center lg:text-left'>
+                <div className='text-center lg:text-left order-2 lg:order-none'>
                     <span className='text-xl'>Lecturer & Researcher</span>
                     <h1 className='text-5xl lg:text-6xl font-semibold mb-5'>Hello,I'm <br /> <span className='text-accent'>Adib Morshed Yeasin</span>
 
@@ -24,7 +24,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='order-1 lg:order-none mb-8 lg:mb-0'>
                     <Photo/>
                 </div>
             </div>
