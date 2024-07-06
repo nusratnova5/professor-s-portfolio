@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Components/Home/Home";
 import Dashboard from "../Components/Dashboard/Dashboard";
 import DashboardLayout from "../Layouts/DashboardLayout";
+import Services from "../Components/Services/Services";
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/services",
+                element: <Services />
             }
         ]
     },
