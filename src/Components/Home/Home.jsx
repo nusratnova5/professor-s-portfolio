@@ -2,6 +2,7 @@ import React from 'react';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import SocialIcons from './SocialIcons';
 import Photo from './Photo';
+import Stats from './Stats';
 
 const Home = () => {
     return (
@@ -28,6 +29,7 @@ const Home = () => {
                     <Photo/>
                 </div>
             </div>
+            <Stats/>
         </div>
     );
 };
