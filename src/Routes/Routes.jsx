@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home";
 import Dashboard from "../Components/Dashboard/Dashboard";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import Services from "../Components/Services/Services";
+import Contact from "../Components/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
             {
                 path: "/services",
                 element: <Services />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
             }
         ]
     },

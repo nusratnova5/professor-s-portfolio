@@ -12,7 +12,7 @@ const Navbar = () => {
                     <li><Link to="/services" className='hover:border-b-4 hover:border-accent hover:text-accent rounded-none '>Services</Link></li>
                     <li><Link className='hover:border-b-4 hover:border-accent hover:text-accent rounded-none '>Resume</Link></li>
                     <li><Link className='hover:border-b-4 hover:border-accent hover:text-accent rounded-none '>Work</Link></li>
-                    <li><Link className='bg-accent text-primary rounded-full hover:bg-accent-hover'>Contact</Link></li>
+                    <li><Link to='/contact' className='bg-accent text-primary rounded-full hover:bg-accent-hover'>Contact</Link></li>
                     
                 </ul>
             </div>

@@ -3,6 +3,7 @@ import { MdOutlineFileDownload } from 'react-icons/md';
 import SocialIcons from './SocialIcons';
 import Photo from './Photo';
 import Stats from './Stats';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
