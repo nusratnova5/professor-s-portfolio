@@ -6,6 +6,7 @@ import DashboardLayout from "../Layouts/DashboardLayout";
 import Services from "../Components/Services/Services";
 import Contact from "../Components/Contact/Contact";
 import Works from "../Components/Works/Works";
+import AboutMe from "../Components/About me/AboutMe";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
             {
                 path: "/works",
                 element: <Works />
+            },
+            {
+                path: "/me",
+                element: <AboutMe />
             },
             {
                 path: "/contact",

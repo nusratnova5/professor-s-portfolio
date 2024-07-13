@@ -58,7 +58,7 @@ const Works = () => {
     ];
 
     return (
-        <div className='relative flex flex-col justify-center items-center bg-gray-900 text-white text-base pb-8 sm:text-lg m-4'>
+        <div className='w-full relative flex flex-col justify-start items-center bg-primary text-white text-base pb-8 sm:text-lg m-4'>
             <div
                 className={`fixed top-0 left-0 w-1 bg-red-500 h-full opacity-60 z-20 ${
                     scrollDirection === 'down' ? 'visible' : 'invisible'
@@ -91,20 +91,21 @@ const InViewComponent = ({ item, index }) => {
             ref={ref}
             initial={{ opacity: 0, x: 100 }}
             animate={controls}
-            className='flex mb-10'
+            className='flex mb-10 w-3/4' // Ensure the component takes up 3/4 of the width
         >
             <div className='hidden items-start w-44 pt-0.5 relative sm:flex'>
-                <div className='w-4/5 text-gray-500'>{item.date}</div>
-                <div className='border border-red-600 w-px h-full translate-x-5 translate-y-10 opacity-30'></div>
-                <MdOutlineWorkHistory className='text-3xl z-20' />
-                <div className='border border-red-500 h-px w-8 translate-y-5 opacity-30'></div>
+                <div className='w-4/5 text-gray-500 text-xl'>{item.date}</div>
+                <div className='border border-accent w-px h-full translate-x-5 translate-y-10 opacity-30'></div>
+                <MdOutlineWorkHistory className='text-5xl z-20 text-accent' />
+                <div className='border border-accent h-px w-8 translate-y-5 opacity-30'></div>
             </div>
-            <div className='border border-gray-600 rounded-lg px-8 py-4 bg-gray-800 w-full text-center z-10 sm:w-96'>
+            <div className='border border-accent rounded-lg px-8 py-4 bg-gray-800 w-full start z-10 sm:w-96'>
                 <div className='text-xl font-medium'>{item.title}</div>
                 <div className='text-gray-300 mb-6 sm:mb-8 sm:text-xs'>
                     {item.location}
                     <span className='sm:hidden'>{item.date}</span>
                 </div>
+                <div className='text-xl font-medium'>{item.designation}</div>
                 <div className='mb-4 text-left'>{item.description}</div>
             </div>
         </motion.div>
