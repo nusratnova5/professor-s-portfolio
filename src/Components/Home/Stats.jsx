@@ -9,15 +9,15 @@ const Stats = () => {
         },
         {
             num: 26,
-            text:"Projects Completed",
+            text:"Research Publications",
         },
         {
             num: 8,
-            text:"Technologies mastered",
+            text:"Student Projects Supervised",
         },
         {
-            num: 500,
-            text:"Code Commits",
+            num: 5,
+            text:"Conferences Attended",
         }
     ]
     return (

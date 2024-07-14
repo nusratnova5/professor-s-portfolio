@@ -41,21 +41,20 @@ const Services = () => {
           }
         `}
       </style>
-        <div className='min-h-[80vh] flex flex-col justify-center py-12 lg:py-0'>
-            <div className='w-3/4 mx-auto'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'>
+        <div className='w-full flex flex-col justify-center py-12 lg:py-0'>
+            <div className='mx-auto w-full'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-[60px] w-full'>
                     {services.map((service, index) => {
                         return (
-                            <div key={index} className='flex-1 flex flex-col justify-center gap-6 group'>
+                            <div key={index} className='flex-1 flex-col justify-center gap-6 group w-full border-b border-white/20'>
                                 <div className='w-full flex justify-between items-center'>
                                     <div className='text-4xl text-transparent font-extrabold text-outline text-outline-hover transition-all duration-500 '>{service.num}</div>
                                     <Link href={service.href}
                                     className="w-[50px] h-[50px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                                     ><BsArrowDownRight className="text-primary text-3xl" /></Link>
                                 </div>
-                                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
-                                <p className="text-white/60">{service.description}</p>
-                                <div className='border-b border-white/20 w-full'></div>
+                                <h2 className="text-[42px] mt-2 mb-5 font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
+                                <p className="text-white/60 mb-5">{service.description}</p>
                             </div>
                         )
                     })}

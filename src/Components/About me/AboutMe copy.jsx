@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
@@ -21,21 +21,16 @@ const AboutMe = () => {
         ],
     };
 
-    // const [isVisible, setIsVisible] = useState(false);
-    const isVisible = true;
+    const [isVisible, setIsVisible] = useState(false);
     const { ref, inView } = useInView({
         triggerOnce: true, // Only trigger once
         threshold: 0.5, // Trigger when 50% of the element is visible
     });
 
-    // useEffect(()=> {
-    //     alert(inView)
-    // }, [inView])
-
     // Set isVisible to true when the section is in view
-    // if (inView) {
-    //     setIsVisible(true);
-    // }
+    if (inView) {
+        setIsVisible(true);
+    }
 
     return (
         <div className='w-full mx-auto' ref={ref}>
@@ -71,7 +66,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className='w-full '>
-                        {inView && info.skills?.map((skill, index) => (
+                        {isVisible && info.skills.map((skill, index) => (
                             <div key={index} className="mb-4">
                                 <div className='flex justify-between'>
                                     <p className="mb-2">{skill.name}</p>
